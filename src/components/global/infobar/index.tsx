@@ -8,12 +8,17 @@ import ClerkAuthState from "../clerk-auth-state";
 import { HelpDuoToneWhite } from "@/icons";
 import UpgradeCard from "../sidebar/upgrade";
 import { LogoSmall } from "@/svgs/logo-small";
+import { SubscriptionPlan } from "../subscription-plan";
+import CreateAutomation from "../create-automation";
+import Search from "./search/search";
+import { Notifications } from "../notifications";
+import MainBreadCrumps from "../main-bread-crumps";
 
 type Props = {
   slug: string;
 };
 
-const NavBar = ({ slug }: Props) => {
+const InfoBar = ({ slug }: Props) => {
   const { page } = usePaths();
   const currentPage = PAGE_BREAD_CRUMBS.includes(page) || page == slug;
   return (
@@ -42,16 +47,22 @@ const NavBar = ({ slug }: Props) => {
                     <p className="text-[#989CA0]">Help</p>
                   </div>
                 </div>
-                <div className="flex  justify-center flex-1 items-end">
-                  <UpgradeCard />
-                </div>
+                <SubscriptionPlan type="FREE">
+                  <div className="flex  justify-center flex-1 items-end">
+                    <UpgradeCard />
+                  </div>
+                </SubscriptionPlan>
               </div>
             </Sheet>
           </span>
+          <Search />
+          <CreateAutomation />
+          <Notifications />
         </div>
+        <MainBreadCrumps page={page == slug ? "Home" : page} slug={slug} />
       </div>
     )
   );
 };
 
-export default NavBar;
+export default InfoBar;

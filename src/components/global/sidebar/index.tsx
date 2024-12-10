@@ -6,6 +6,7 @@ import { Separator } from "@/components/ui/separator";
 import ClerkAuthState from "../clerk-auth-state";
 import { HelpDuoToneWhite } from "@/icons";
 import UpgradeCard from "./upgrade";
+import { SubscriptionPlan } from "../subscription-plan";
 
 type Props = {
   slug: string;
@@ -35,9 +36,11 @@ const Sidebar = ({ slug }: Props) => {
             <p className="text-[#989CA0]">Help</p>
           </div>
         </div>
-        <div className="flex  justify-center flex-1 items-end">
-          <UpgradeCard />
-        </div>
+        <SubscriptionPlan type="FREE">
+          <div className="flex  justify-center flex-1 items-end">
+            <UpgradeCard />
+          </div>
+        </SubscriptionPlan>
       </div>
     </div>
   );
