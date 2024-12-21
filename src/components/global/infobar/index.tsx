@@ -12,7 +12,7 @@ import { SubscriptionPlan } from "../subscription-plan";
 import CreateAutomation from "../create-automation";
 import Search from "./search/search";
 import { Notifications } from "../notifications";
-import MainBreadCrumps from "../main-bread-crumps";
+import MainBreadCrumps from "../bread-crumbs/main-bread-crumps";
 
 type Props = {
   slug: string;
