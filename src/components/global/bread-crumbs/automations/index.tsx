@@ -5,7 +5,7 @@ type Props = {
   id: string;
 };
 
-const AutomationBreadCrumb = ({}: Props) => {
+const AutomationBreadCrumb = ({id}: Props) => {
   return (
     <div className="rounded-full w-full p-5 bg-[#1818B11A] flex justify-between items-center">
       <div className="flex items-center gap-x-3 min-w-0">
