@@ -1,3 +1,4 @@
+"use client";
 import { PAGE_BREAD_CRUMBS } from "@/constants/pages";
 import { usePaths } from "@/hooks/use-nav";
 import Sheet from "../sheets";
